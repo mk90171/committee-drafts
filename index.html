@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Draft Materials — Morgan Kearns</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --deep-green: #546B4A;
+    --mid-green: #7A9468;
+    --sage: #EBF0E3;
+    --ink: #2B2E28;
+    --paper: #FCFBF8;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 4rem;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mid-green);
+    margin-bottom: 0.75rem;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 2.1rem;
+    color: var(--deep-green);
+    margin: 0 0 0.5rem;
+    line-height: 1.25;
+  }
+
+  .intro {
+    color: #5A5F54;
+    margin: 0 0 3rem;
+    max-width: 46ch;
+  }
+
+  .doc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .doc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.35rem 1.5rem;
+    background: var(--sage);
+    border-radius: 6px;
+    border: 1px solid rgba(84, 107, 74, 0.15);
+    text-decoration: none;
+    color: var(--ink);
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+
+  .doc:hover {
+    background: #E1E9D5;
+    transform: translateY(-1px);
+  }
+
+  .doc:focus-visible {
+    outline: 2px solid var(--deep-green);
+    outline-offset: 2px;
+  }
+
+  .doc-text .label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mid-green);
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+
+  .doc-text .title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: var(--deep-green);
+  }
+
+  .doc-text .note {
+    font-size: 0.85rem;
+    color: #6B7064;
+    margin-top: 0.2rem;
+  }
+
+  .arrow {
+    font-size: 1.3rem;
+    color: var(--deep-green);
+    flex-shrink: 0;
+  }
+
+  footer {
+    margin-top: 3.5rem;
+    font-size: 0.8rem;
+    color: #9AA091;
+    border-top: 1px solid rgba(84, 107, 74, 0.15);
+    padding-top: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 3rem 1.25rem 3rem; }
+    h1 { font-size: 1.7rem; }
+    .doc { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">For committee review</div>
+    <h1>Draft materials</h1>
+    <p class="intro">Current drafts of my job market paper and teaching statement. This page isn't linked from my site — feel free to share the link directly with anyone reviewing.</p>
+
+    <div class="doc-list">
+      <a class="doc" href="jmp-draft.pdf">
+        <div class="doc-text">
+          <span class="label">Job Market Paper</span>
+          <span class="title">VOCA Grant Funding &amp; Domestic Violence Shelters</span>
+          <span class="note">PDF draft</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="doc" href="teaching-statement-draft.pdf">
+        <div class="doc-text">
+          <span class="label">Teaching Statement</span>
+          <span class="title">Draft</span>
+          <span class="note">PDF draft</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <footer>Last updated <span id="last-updated"></span> · Morgan Kearns</footer>
+  </div>
+
+  <script>
+    document.getElementById('last-updated').textContent = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  </script>
+</body>
+</html>
